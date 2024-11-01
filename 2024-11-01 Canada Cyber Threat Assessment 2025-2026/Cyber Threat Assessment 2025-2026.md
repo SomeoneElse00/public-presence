@@ -43,7 +43,7 @@ TLDR:
 - Cybercrime-as-a-Service (CaaS) business models have been on the rise. Watch out for phishing and scams!
 - Ransomware remains the biggest threat, with payment sizes and the number of incidents on the rise with an average 26% YOY growth.
 - AI enhances social engineering, making phishing more personalized and effective.
-- Detection evasion is becoming a priority.
+- Detection evasion is becoming a priority for APTs.
 
 A longer summary can be found on my GitHub repo:
 https://github.com/SomeoneElse00/public-presence/blob/main/2024-11-01%20Canada%20Cyber%20Threat%20Assessment%202025-2026/Cyber%20Threat%20Assessment%202025-2026.md
