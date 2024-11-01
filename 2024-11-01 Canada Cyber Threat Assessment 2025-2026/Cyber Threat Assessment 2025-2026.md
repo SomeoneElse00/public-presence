@@ -48,11 +48,11 @@ TLDR:
 A longer summary can be found on my GitHub repo:
 https://github.com/SomeoneElse00/public-presence/blob/main/2024-11-01%20Canada%20Cyber%20Threat%20Assessment%202025-2026/Cyber%20Threat%20Assessment%202025-2026.md
 
-Government of Canada News Release:
-https://www.canada.ca/en/communications-security/news/2024/10/canadian-centre-for-cyber-security-releases-national-cyber-threat-assessment-2025-2026.html
-
 The full article can be found here:
 https://www.cyber.gc.ca/en/guidance/national-cyber-threat-assessment-2025-2026
+
+Government of Canada News Release:
+https://www.canada.ca/en/communications-security/news/2024/10/canadian-centre-for-cyber-security-releases-national-cyber-threat-assessment-2025-2026.html
 
 --2--
 
