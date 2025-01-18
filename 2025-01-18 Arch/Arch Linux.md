@@ -1,6 +1,6 @@
 # Arch Linux Experimentation
 
-For this installation, I followed the guide available on the [Arch Organization's Wiki (2024-10-14)](https://wiki.archlinux.org/title/Installation_guide). I will highlight any struggles I had and variances to their steps here.  
+For this installation, I followed the guide available on the [Arch Organization's Wiki (2024-10-14)](https://wiki.archlinux.org/title/Installation_guide). I will highlight any intricacies, and variances to their steps here.  
 
 ## 1 - Pre-Installation
 
@@ -29,7 +29,7 @@ Used `us` (default).
 ```bash
 loadkeys list-keymaps
 loadkeys us
-```
+```  
 
 ### 1.6 Verify Boot Mode
 
@@ -123,7 +123,7 @@ nano /etc/pacman.d/mirrorlist
 
 I skipped installing CPU microcode since I'm using a VM. I also skipped using the `linux-firmware` package since I am installing in a VM.  
 
-```
+```bash
 pacstrap -K /mnt base linux man-db man-pages texinfo grub efibootmgr nano networkmanager virtualbox-guest-utils
 ```  
 
@@ -233,7 +233,7 @@ reboot
 
 ![Arch bad grub.jpg](<images/Arch bad grub.jpg>)  
 
-Once I rebooted, the GRUB interface did not appear (a grub terminal did instead), so I assumed I skipped a step in GRUB setup. I realized I did not specify the disk for grub to boot from, so I needed to use grub shell to get back in. 
+Once I rebooted, the GRUB interface did not appear (a grub terminal did instead), so I assumed I skipped a step in GRUB setup. I realized I did not specify the disk for grub to boot from, so I needed to use grub shell to get back in.  
 
 First, I quickly ran `set pager=1` to clean up the output in the terminal. Next, I ran `ls` to see the drives. I had three familiar drives: `(hd0,gpt3)`, `(hd0,gpt2)`, and `(hd0,gpt1)`. After running `ls (hd0,gpt1)`, and seeing my boot files, I knew that gpt1 was my boot files, gpt2 was my swap partition, and gpt3 was my root directory. I ran `linux (hd0,gpt1)/vmlinuz-linux root=/dev/sda3` to set the kernel, and `initrd (hd0,gpt1)/initramfs-linux.img` to set the boot image. I finally ran `boot` to load the system.  
 
@@ -247,7 +247,7 @@ See 3.8.1 for corrective actions.
 
 #### 5.1.1 System Administration
 
-First, to start with package installations, I needed to enable `networkmanager`. Next, I installed the `nano` text editor, and `sudo`.
+First, to start with package installations, I needed to enable `networkmanager`. Next, I installed the `nano` text editor, and `sudo`.  
 
 ```bash
 systemctl start NetworkManager.service
@@ -260,7 +260,7 @@ When editing the sudoers file, I noticed that `visudo` was not cooperating or al
 ```bash
 export EDITOR="nano"
 export VISUAL="$EDITOR"
-```
+```  
 
 Following this, I used `visudo` to allow members of the `wheel` group become sudo (uncomment the appropriate line).<!--, and then added my user to the wheel group with `gpasswd -a [user] wheel`. -->  
 
